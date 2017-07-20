@@ -1,6 +1,6 @@
-##Bluetooth Low Energy AutoLock
+## Bluetooth Low Energy AutoLock
 
-###(Used for automatically locking a linux workstation when a specially configured beacon goes out of range)
+### (Used for automatically locking a linux workstation when a specially configured beacon goes out of range)
 
 This is currently in the planning stages but will likely:
 

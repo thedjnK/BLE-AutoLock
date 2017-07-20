@@ -34,14 +34,14 @@
         //Minimum acceptable connection interval (80ms)
 #define MIN_CONN_INTERVAL                    80000
         //Maximum acceptable connection interval (2 seconds)
-#define MAX_CONN_INTERVAL                    200000
+#define MAX_CONN_INTERVAL                    100000
         //Slave latency -- number of conn events that can be missed
 #define SLAVE_LATENCY                        5
         //Connection supervisory timeout (12 seconds) - max 32 seconds
-#define CONN_SUP_TIMEOUT                     12000
+#define CONN_SUP_TIMEOUT                     12000000
         //DiscoverableMode, set to BLE_DISCOVERABILITY_xxx
 #define DISCOVERY_MODE                       BLE_DISCOVERABILITY_GENERAL
-#define MAX_DEVNAME_CHRS                     10
+#define MAX_DEVNAME_CHRS                     9
         //Set Appearance advertise 0 to suppress
 #define ADV_APPEARANCE                       1
         //Advertise interval
@@ -1607,7 +1607,6 @@ sub InitTempSensor()
   dim rc
 
   //Poll sensor on a timer
-  TimerStart(0,TEMPERATURE_POLL_MS,1)
 
   //Temperature sensor is AIN4 which is on the S3 pin
   rc = GpioSetFunc(4,1,2)  //Remove the pull resistor
